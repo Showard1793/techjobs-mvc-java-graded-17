@@ -37,8 +37,11 @@
   <hr />
 
   <!-- TODO #4 - Loop over the search results to display all job fields. -->
+    <!-- Include job results from the fragment -->
+    <div th:each="job : ${jobs}">
+        <div th:replace="list-jobs :: jobListing(job)"></div>
+    </div>
 
-</div>
 
 </body>
 </html>
