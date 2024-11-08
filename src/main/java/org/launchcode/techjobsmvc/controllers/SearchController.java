@@ -29,7 +29,7 @@ public class SearchController {
     }
 
     // TODO #3 - Create a handler to process a search request and render the updated search view.
-    @PostMapping("results")                                             //X TODO #3.1: configure correct mapping type/route by referencing "form" tag in search.html
+    @PostMapping(value = "results")                                             //X TODO #3.1: configure correct mapping type/route by referencing "form" tag in search.html
     public String displaySearchResults(Model model,                     //X TODO #3.2: displaySearchResults takes in a Model parameter
                                        @RequestParam String searchType, //X TODO #3.3 & 3.4: take in 2 other parameters: searchType and searchTerm (found in search.html)
                                        @RequestParam String searchTerm) {
@@ -44,7 +44,7 @@ public class SearchController {
 
         // Add jobs and column choices to model
         model.addAttribute("jobs", jobs);                  //X TODO #3.6: Pass jobs into the search.html view via the model parameter.
-        model.addAttribute("columns", columnChoices);      //X TODO #3.7: Pass ListController.columnChoices into the view, as the existing search handler does.
+        model.addAttribute("columns", ListController.columnChoices);      //X TODO #3.7: Pass ListController.columnChoices into the view, as the existing search handler does.
 
         return "search";
     }

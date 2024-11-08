@@ -27,5 +27,33 @@
     </div>
 </div>
 
+<!-- JOB LISTING TABLE FRAGMENT -->
+<table th:fragment="jobListing(jobs)" class="job-listing">                    <!--X TODO #1.2 add CSS class "job-listing" to style the results-->
+    <tr>
+        <th style="text-align:left;">ID</th>       <!--X TODO #1.2b "job-listing" centered the table heading of result list. Changed styling inline to align heading to the left. -->
+        <td th:text="${job.id}"></td>              <!--X TODO #1.4 Run code to check formatting. All looks good-->
+    </tr>
+    <tr>
+        <th style="text-align:left;">Name</th>
+        <td th:text="${job.name}"></td>
+    </tr>
+    <tr>
+        <th style="text-align:left;">Employer</th>
+        <td th:text="${job.employer}"></td>
+    </tr>
+    <tr>
+        <th style="text-align:left;">Location</th>
+        <td th:text="${job.location}"></td>
+    </tr>
+    <tr>
+        <th style="text-align:left;">Position Type</th>
+        <td th:text="${job.positionType}"></td>
+    </tr>
+    <tr>
+        <th style="text-align:left;">Core Competency</th>
+        <td th:text="${job.coreCompetency}"></td>
+    </tr>
+</table>
+
 </body>
 </html>

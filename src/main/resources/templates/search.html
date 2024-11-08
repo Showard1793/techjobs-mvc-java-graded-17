@@ -40,7 +40,7 @@
     <!-- Include job results from the fragment -->
 
     <div th:each="job : ${jobs}">
-        <table th:replace="~{list-jobs :: jobListing(jobs)}"></table>
+        <table th:replace="~{fragments :: jobListing(jobs)}"></table>
     </div>
 
 
