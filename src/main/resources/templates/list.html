@@ -25,7 +25,7 @@
       <a th:href="@{/list/jobs(column='all')}" th:text="'View All'"></a>    <!--X TODO#2.1 Find data to pass in for query parameters from ListController -->
     </td>
 
-    <!-- loops through tableChoices and lists each category-->
+    <!-- loops through tableChoices and lists each category.-->
     <td th:each="category : ${tableChoices}">
       <ul>
         <li th:each="item : ${category.value}">
