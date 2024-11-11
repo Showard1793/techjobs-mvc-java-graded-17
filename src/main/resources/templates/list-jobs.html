@@ -11,9 +11,9 @@
 
   <!--X TODO #1 - Use a loop to display job results in a table. -->
 
-  <div th:each="job : ${jobs}"> <!--X TODO #1.1 loop through jobs passed in from ListController and display as table -->
+  <th:block th:each="job : ${jobs}"> <!--X TODO #1.1 loop through jobs passed in from ListController and display as table -->
       <table th:replace="~{fragments :: jobListing(jobs)}"></table>
-  </div>
+  </th:block>
 
 </div>
 </body>
